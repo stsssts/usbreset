@@ -5,10 +5,10 @@
 # Run
 #   systemctl daemon-reload
 # You can now start/enable each remote by using usbreset@<device>
-#   systemctl enable --now usbreset@001/001.timer
+#   systemctl enable --now usbreset@2c7c:0125.timer
 
 [Unit]
 Description=usbreset: Reset usb device
 
 [Service]
-ExecStart=/usr/local/bin/usbreset /dev/bus/usb/%I
+ExecStart=/usr/local/bin/usbreset-id %I

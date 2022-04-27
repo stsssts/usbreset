@@ -1,0 +1,4 @@
+#!/bin/bash
+
+devpath=$(lsusb | grep "$1" | awk '{print "/dev/bus/usb/"$2"/"$4}' | tr -d :)
+usbreset "$devpath"
