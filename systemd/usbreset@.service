@@ -1,0 +1,14 @@
+# User service for syncing files
+#
+# Place in /usr/local/lib/systemd/system/
+# File must include the '@' (ex usbreset@.service)
+# Run
+#   systemctl daemon-reload
+# You can now start/enable each remote by using usbreset@<device>
+#   systemctl enable --now usbreset@001/001.timer
+
+[Unit]
+Description=usbreset: Reset usb device
+
+[Service]
+ExecStart=/usr/local/bin/usbreset /dev/bus/usb/%I
