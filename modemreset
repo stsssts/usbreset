@@ -1,0 +1,4 @@
+#!/bin/bash
+
+index=$(mmcli -L | awk '/Modem/ {print $1 }' | rev | cut -d'/' -f 1 | rev)
+mmcli -m "$index" -r

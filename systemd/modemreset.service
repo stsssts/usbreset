@@ -1,0 +1,13 @@
+# User service for reseting modem
+#
+# Place in /usr/local/lib/systemd/system/
+# Run
+#   systemctl daemon-reload
+# You can now start/enable timer
+#   systemctl enable --now modemreset.timer
+
+[Unit]
+Description=modemreset: Reset modem
+
+[Service]
+ExecStart=/usr/local/bin/modemreset

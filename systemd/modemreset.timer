@@ -1,0 +1,9 @@
+[Unit]
+Description=modemreset: Periodically reset modem
+
+[Timer]
+OnBootSec=240min
+OnUnitActiveSec=240min
+
+[Install]
+WantedBy=timers.target
