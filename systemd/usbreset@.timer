@@ -2,8 +2,8 @@
 Description=usbreset: Periodically reset usb device
 
 [Timer]
-OnBootSec=120min
-OnUnitActiveSec=120min
+OnBootSec=240min
+OnUnitActiveSec=240min
 
 [Install]
 WantedBy=timers.target
